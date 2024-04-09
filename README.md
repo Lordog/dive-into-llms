@@ -26,7 +26,7 @@
 <div align="center">
 <p align="center">
   <a href="#项目动机">项目动机</a>/
-  <a href="#写前必看">教程目录</a>/
+  <a href="#教程目录">教程目录</a>/
   <a href="#贡献者列表">贡献者列表</a>
 </p>
 </div>
@@ -59,9 +59,9 @@
 
 ## <img src="./pics/icon/heart.png" width="25" />贡献者列表
 
-感谢以下同学对本项目的支持与贡献
+感谢以下同学对本项目的支持与贡献:
 
-上海交通大学 袁童鑫
+上海交通大学 [袁童鑫](https://github.com/Lordog)
 
 上海交通大学 马欣贝
 
