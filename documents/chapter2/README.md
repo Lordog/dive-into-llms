@@ -1,4 +1,4 @@
-# Chapter1. 提示学习&思维链
+# 大模型提示学习与思维链
 导读: 该部分介绍大模型的API调用与推理指南
 
 > ”AI在线求鼓励？大模型对一些问题的回答令人大跌眼镜，但它可能只是想要一句「鼓励」”https://mp.weixin.qq.com/s/LD5UL_CgDwUfPFb_lafGng
@@ -25,7 +25,7 @@ Openai：https://platform.openai.com/playground
 其他：文心一言、百川等
     
 *基本流程：开通服务获得API-KEY（获赠计算额度），使用API Key调用服务
-  
+
 
 ### 2. 调用方式（以通义千问为例）
 #### 1. 通过GUI界面调用（适合案例测试）
@@ -109,12 +109,12 @@ sample_sync_call_streaming()
 
 ### 5. 观察&思考：
 1. 错误范例的影响：把少样本学习中的例子改成错误的答案，结果会发生变化吗？
-  https://github.com/sunlab-osu/Understanding-CoT（ACL 2023）
+    https://github.com/sunlab-osu/Understanding-CoT（ACL 2023）
 
 ![understanding-CoT](./assets/understanding-CoT.png)
 
 2. 自洽性提升推理结果：设置temperature大于0（如0.7），保持同样的输入，多次采样，生成多个推理路径和答案，最终选择答案出现最多的作为最终答案输出。
-  https://openreview.net/pdf?id=1PL1NIMMrw（ICLR 2023）
+    https://openreview.net/pdf?id=1PL1NIMMrw（ICLR 2023）
 
 ![self-consistency](./assets/self-consistency.png)
 
@@ -124,7 +124,7 @@ sample_sync_call_streaming()
 3. Critic结合工具校正结果（ICLR 2024）：https://github.com/microsoft/ProphetNet/tree/master/CRITIC
 4. ReAct机器人操控（ICLR 2023）：https://react-lm.github.io/
 5. 更多提示技术可见：https://www.promptingguide.ai/
-  
+
 注：上述工作均基于openai接口，需科学获取api_key。若无条件，可考虑将接口改成上述国产接口实验。
 
 ### 7. 安全应用（Optional）
@@ -142,6 +142,6 @@ sample_sync_call_streaming()
 
 ### 8. 福利
 1. “AI也需要鼓励师？”
-  [Chain of Thought论文、代码和资源【论文精读·43】-哔哩哔哩](https://b23.tv/0F1Wtqh)
+    [Chain of Thought论文、代码和资源【论文精读·43】-哔哩哔哩](https://b23.tv/0F1Wtqh)
 2. ChatGPT万能Prompt模板：https://github.com/f/awesome-chatgpt-prompts
 3. 用ChatGPT、Kimi克隆自己的写作风格：https://www.jiqizhixin.com/articles/2024-03-21-9
