@@ -1,4 +1,4 @@
-# LLM Tutorial by Hand for Research Beginners
+# 动手学大模型 Dive into LLMs
 
 大模型系列入门教程，由上海交通大学网络空间全学院[张倬胜老师](https://bcmi.sjtu.edu.cn/home/zhangzs/)课程讲义发展而来，通过简单的实践，帮助新同学快速入门大模型，开展后续研究。
 
