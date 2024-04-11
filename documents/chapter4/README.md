@@ -24,7 +24,7 @@ X-SIR仓库包含以下内容的实现
 - 三种文本水印算法：X-SIR, SIR和KGW
 - 两种水印去除攻击方法：paraphrase和translation
 
-![img](https://iiujhgz8ch1.feishu.cn/space/api/box/stream/download/asynccode/?code=Nzk1NWY4ZTFjZDIzN2NlZWE5MGEyOGZiNTU0NWVmNTBfdUwxVzNuSHVFSkwzbU5LeHZ5RzlPVUR3SWE0Zk9LRzRfVG9rZW46UnpXRWJiSkpub2NyRUF4WUVUR2MydFJpbkZiXzE3MTI3NTM0MzA6MTcxMjc1NzAzMF9WNA)
+![img](./assets/x-sir.png)
 
 ### 2.2 环境准备
 
@@ -97,7 +97,7 @@ pip3 install -r requirements.txt
 
 - 计算**有水印**文本的水印强度
 
-  - ```JSON
+  - ```python
     python3 detect.py \
         --base_model $MODEL_NAME \
         --detect_file gen/$MODEL_ABBR/kgw/mc4.en.mod.jsonl \
@@ -107,7 +107,7 @@ pip3 install -r requirements.txt
 
 - 计算**无水印**文本的水印强度
 
-  - ```JSON
+  - ```python
     python3 detect.py \
         --base_model $MODEL_NAME \
         --detect_file data/dataset/mc4/mc4.en.jsonl \
@@ -145,7 +145,7 @@ pip3 install -r requirements.txt
     F1@FPR=0.01: 0.999
     ```
 
-![img](https://iiujhgz8ch1.feishu.cn/space/api/box/stream/download/asynccode/?code=YzkwZWQwZTk2ZWJjMGFhMjQ3OGU3NWYyNTlhZGM0NmJfeURqaWZLQ1JzN3g5aHdaeWlTcHNvb0hXSDJQcjlLUkdfVG9rZW46VnBEMmJ4U3FVbzVBSkp4NVYzTWNYUUtIbmFmXzE3MTI3NTM0MzA6MTcxMjc1NzAzMF9WNA)
+![img](./assets/curve.png)
 
 ## 评估水印的鲁棒性（可选）
 
