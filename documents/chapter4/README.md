@@ -129,6 +129,7 @@ pip3 install -r requirements.txt
 - 肉眼查看一下两个文件水印强度的区别
 
 ### 3.4 水印评估
+<a name="eval"></a>
 
 - 输入水印检测的z-score文件，计算检测准确度，绘制ROC曲线
 
@@ -180,7 +181,7 @@ pip3 install -r requirements.txt
 
 - 重新评估
 
-  -  见[3.4](https://iiujhgz8ch1.feishu.cn/wiki/TVZ1w8QYJin2bdkOGZGcEVnEnUf#part-Wx34dVjgloSx53x3dWMcU74Tnzd)
+  -  见[3.4](#eval)
 
 - 比较攻击前后水印性能的变化
 
