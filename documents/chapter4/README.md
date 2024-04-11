@@ -77,7 +77,7 @@ pip3 install -r requirements.txt
         --batch_size 32 \
         --input_file data/dataset/mc4/mc4.en.jsonl \
         --output_file gen/$MODEL_ABBR/kgw/mc4.en.mod.jsonl \
-        --WATERMARK_METHOD_FLAG
+        $WATERMARK_METHOD_FLAG
     ```
 
   - 此命令将模型生成的内容保存至输出文件：`gen/$MODEL_ABBR/kgw/mc4.en.mod.jsonl`
