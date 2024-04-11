@@ -31,7 +31,9 @@ X-SIR仓库包含以下内容的实现
 ```Shell
 git clone https://github.com/zwhe99/X-SIR && cd X-SIR
 conda create -n xsir python==3.10.10
+conda activate xsir
 pip3 install -r requirements.txt
+[optional] pip3 install flash-attn==2.3.3
 ```
 
 > requirements.txt里的版本均为建议版本，并非强制要求。
