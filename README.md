@@ -40,14 +40,15 @@
 
 ## <img src="./pics/icon/catalogue.png" width="25" />教程目录
 
-| 教程内容         | 简介                                                         | 地址                                                         |
-| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 微调与部署       | 预训练模型微调与部署指南：想提升预训练模型在指定任务上的性能？让我们选择合适的预训练模型，在特定任务上进行微调，并将微调后的模型部署成方便使用的Demo！ | [[Slides](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/dive-tuning.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/README.md)] |
-| 提示学习与思维链 | 大模型的API调用与推理指南：“AI在线求鼓励？大模型对一些问题的回答令人大跌眼镜，但它可能只是想要一句「鼓励」” | [[Slides](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/dive-prompting.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/README.md)] |
-| 知识编辑         | 语言模型的编辑方法和工具：想操控语言模型在对指定知识的记忆？让我们选择合适的编辑方法，对特定知识进行编辑，并将对编辑后的模型进行验证！ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter3/dive_edit_0410.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter3/README.md)] |
-| 模型水印         | 语言模型的文本水印：在语言模型生成的内容中嵌入人类不可见的水印 | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter4/watermark.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter4/README.md)] |
-| 多模态模型       | TBD                                                          | TBD                                                          |
-| 后门攻击         | TBD                                                          | TBD                                                          |
+| 教程内容           | 简介                                                         | 地址                                                         |
+| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 微调与部署         | 预训练模型微调与部署指南：想提升预训练模型在指定任务上的性能？让我们选择合适的预训练模型，在特定任务上进行微调，并将微调后的模型部署成方便使用的Demo！ | [[Slides](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/dive-tuning.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/README.md)] |
+| 提示学习与思维链   | 大模型的API调用与推理指南：“AI在线求鼓励？大模型对一些问题的回答令人大跌眼镜，但它可能只是想要一句「鼓励」” | [[Slides](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/dive-prompting.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/README.md)] |
+| 知识编辑           | 语言模型的编辑方法和工具：想操控语言模型在对指定知识的记忆？让我们选择合适的编辑方法，对特定知识进行编辑，并将对编辑后的模型进行验证！ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter3/dive_edit_0410.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter3/README.md)] |
+| 模型水印           | 语言模型的文本水印：在语言模型生成的内容中嵌入人类不可见的水印 | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter4/watermark.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter4/README.md)] |
+| 后门攻击           | TBD                                                          | TBD                                                          |
+| 多模态模型         | TBD                                                          | TBD                                                          |
+| 大模型智能体与安全 | 大模型智能体迈向了未来操作系统之旅。然而，大模型在开放智能体场景中能意识到风险威胁吗？ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter7/agent.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter7/README.md)] |
 
 ### <img src="./pics/icon/notes.png" width="25" />免责声明
 
