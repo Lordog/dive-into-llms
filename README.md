@@ -46,7 +46,7 @@
 | 提示学习与思维链   | 大模型的API调用与推理指南：“AI在线求鼓励？大模型对一些问题的回答令人大跌眼镜，但它可能只是想要一句「鼓励」” | [[Slides](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/dive-prompting.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/README.md)] |
 | 知识编辑           | 语言模型的编辑方法和工具：想操控语言模型在对指定知识的记忆？让我们选择合适的编辑方法，对特定知识进行编辑，并将对编辑后的模型进行验证！ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter3/dive_edit_0410.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter3/README.md)] |
 | 模型水印           | 语言模型的文本水印：在语言模型生成的内容中嵌入人类不可见的水印 | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter4/watermark.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter4/README.md)] |
-| 后门攻击           | TBD                                                          | TBD                                                          |
+| 越狱攻击           | 想要得到更好的安全，要先从学会攻击开始。让我们了解越狱攻击如何撬开大模型的嘴！                                                          | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter5/dive-Jailbreak.pdf)]  [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter5/README.md)]                                                        |
 | 多模态模型         | TBD                                                          | TBD                                                          |
 | 大模型智能体与安全 | 大模型智能体迈向了未来操作系统之旅。然而，大模型在开放智能体场景中能意识到风险威胁吗？ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter7/agent.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter7/README.md)] |
 
