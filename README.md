@@ -64,7 +64,9 @@
 
 上海交通大学 [袁童鑫](https://github.com/Lordog)
 
-上海交通大学 马欣贝
+上海交通大学 [马欣贝](https://scholar.google.com/citations?user=LpUi3EgAAAAJ&hl=zh-CN&oi=ao)
 
 上海交通大学 [何志威](https://zwhe99.github.io)
+
+上海交通大学 杜巍
 
