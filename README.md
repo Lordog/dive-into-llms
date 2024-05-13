@@ -47,7 +47,7 @@
 | 知识编辑           | 语言模型的编辑方法和工具：想操控语言模型在对指定知识的记忆？让我们选择合适的编辑方法，对特定知识进行编辑，并将对编辑后的模型进行验证！ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter3/dive_edit_0410.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter3/README.md)] |
 | 模型水印           | 语言模型的文本水印：在语言模型生成的内容中嵌入人类不可见的水印 | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter4/watermark.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter4/README.md)] |
 | 越狱攻击           | 想要得到更好的安全，要先从学会攻击开始。让我们了解越狱攻击如何撬开大模型的嘴！                                                          | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter5/dive-Jailbreak.pdf)]  [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter5/README.md)]                                                        |
-| 多模态模型         | TBD                                                          | TBD                                                          |
+| 多模态模型         | 作为能够更充分模拟真实世界的多模态大语言模型，其如何实现更强大的多模态理解和生成能力？多模态大语言模型是否能够帮助实现AGI？  | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter6/mllms.pdf)]  [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter6/README.md)]   |
 | 大模型智能体与安全 | 大模型智能体迈向了未来操作系统之旅。然而，大模型在开放智能体场景中能意识到风险威胁吗？ | [[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter7/agent.pdf)] [[Tutorial](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter7/README.md)] |
 
 ### <img src="./pics/icon/notes.png" width="25" />免责声明
@@ -70,3 +70,4 @@
 
 上海交通大学 杜巍
 
+新加坡国立大学 [费豪](http://haofei.vip/)
