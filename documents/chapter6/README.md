@@ -192,11 +192,7 @@ pip install -r requirements.txt
 
 #### 2.4.1 加载预训练的NExT-GPT模型checkpoint
 
-- **步骤1**：加载`冻结参数`。
-
-[NExT-GPT](https://github.com/NExT-GPT/NExT-GPT) 是基于以下现有模型或模块进行训练的。
-请按照以下说明准备checkpoint。
-
+- **步骤1**：加载`冻结参数`。[NExT-GPT](https://github.com/NExT-GPT/NExT-GPT) 是基于以下现有模型或模块进行训练的, 请按照以下说明准备checkpoint。
     - `ImageBind` 是统一的图像/视频/音频编码器。可以从[此处](https://dl.fbaipublicfiles.com/imagebind/imagebind_huge.pth)下载预训练检查点，版本为`huge`。然后，将`imagebind_huge.pth`文件放置在[[./ckpt/pretrained_ckpt/imagebind_ckpt/huge]](ckpt/pretrained_ckpt/imagebind_ckpt/)。
     - `Vicuna`：首先按照[[这里]](ckpt/pretrained_ckpt/prepare_vicuna.md)的说明准备LLaMA。然后将预训练模型放置在[[./ckpt/pretrained_ckpt/vicuna_ckpt/]](ckpt/pretrained_ckpt/vicuna_ckpt/)。
     - `Image Diffusion` 用于生成图像。NExT-GPT 使用版本为`v1-5`的[Stable Diffusion](https://huggingface.co/runwayml/stable-diffusion-v1-5)。(_代码里将会自动下载_)
@@ -225,7 +221,7 @@ bash scripts/app.sh
 目前的版本能够支持文字、图像、视频、声音四种模态下任意组合的输入，并任务组合模态的输出。
 并且支持多轮上下文交互。
 
-请各位自行运行测试。
+请各位自行运行测试效果。
 
 - **Case-1**：输入T+I，输出T+A
 
