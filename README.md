@@ -36,8 +36,6 @@
 
 《动手学大模型》系列编程实践教程，由上海交通大学2024年春季《人工智能安全技术》课程（NIS3353）讲义拓展而来（教师：[张倬胜](https://bcmi.sjtu.edu.cn/home/zhangzs/)），旨在提供大模型相关的入门编程参考。通过简单实践，帮助同学快速入门大模型，更好地开展课程设计或学术研究。
 
-[Gitbook](https://sjtullm.gitbook.io/dong-shou-xue-da-mo-xing/1.-ti-shi-xue-xi-si-wei-lian)阅读体验更佳。
-
 ## <img src="./pics/icon/catalogue.png" width="25" />教程目录
 
 | 教程内容           | 简介                                                         | 地址                                                         |
