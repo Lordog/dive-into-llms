@@ -28,12 +28,18 @@ https://github.com/huggingface/transformers
 https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification
 
 2. 安装环境：
-- 1. （可选）通过conda创建新的环境：conda create -n llm python=3.9
-- 2. （可选）进入虚拟环境：conda activate llm
+- 1. 通过conda创建新的环境：conda create -n llm python=3.9
+- 2. 进入虚拟环境：conda activate llm
 - 3. pip install transformers
-- 4. pip install -r requirements.txt
+- 4. 删除requirements.txt中自动安装的torch，pip install -r requirements.txt
 
-*Note：安装速度网速慢？使用国内源：pip install transformers -i https://pypi.tuna.tsinghua.edu.cn/simple
+> 若下载速度慢，可使用国内源：pip [Packages] -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+> 若使用国内源安装pytorch，将自动选择pytorch的cpu版本，无法运行gpu，因此——
+
+- 5. conda install pytorch
+
+> 若下载速度慢，可按照该博客配置conda镜像：https://blog.csdn.net/weixin_42797483/article/details/132048218
 
 3. 准备数据：我们以Kaggle上的虚假推文数据集为例：https://www.kaggle.com/c/nlp-getting-started/data
 
