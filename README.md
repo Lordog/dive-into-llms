@@ -69,3 +69,6 @@
 上海交通大学 杜巍
 
 新加坡国立大学 [费豪](http://haofei.vip/)
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Lordog/dive-into-llms&type=Date)](https://star-history.com/#Lordog/dive-into-llms&Date)
