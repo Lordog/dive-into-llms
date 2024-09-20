@@ -58,7 +58,7 @@
 
 ## <img src="./pics/icon/heart.png" width="25" />贡献者列表
 
-感谢以下老师和同学对本项目的支持与贡献:
+感谢以下老师和同学对本项目的支持与贡献：
 
 上海交通大学 [袁童鑫](https://github.com/Lordog)
 
