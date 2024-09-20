@@ -68,6 +68,8 @@
 
 上海交通大学 杜巍
 
+上海交通大学 [赵皓东](https://dongdongzhaoup.github.io/)
+
 新加坡国立大学 [费豪](http://haofei.vip/)
 ## Star History
 
