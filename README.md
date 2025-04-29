@@ -93,7 +93,7 @@
 
 **《动手学大模型》系列教程开发团队**：
 
-- 上海交通大学：[张倬胜](https://bcmi.sjtu.edu.cn/home/zhangzs/)、[袁童鑫](https://github.com/Lordog)、[马欣贝](https://scholar.google.com/citations?user=LpUi3EgAAAAJ&hl=zh-CN&oi=ao)、 [何志威](https://zwhe99.github.io)、[杜巍](https://scholar.google.com/citations?user=tFYUBLkAAAAJ&hl=en)、[赵皓东](https://dongdongzhaoup.github.io/)； 
+- 上海交通大学：[张倬胜](https://bcmi.sjtu.edu.cn/home/zhangzs/)、[袁童鑫](https://github.com/Lordog)、[马欣贝](https://scholar.google.com/citations?user=LpUi3EgAAAAJ&hl=zh-CN&oi=ao)、 [何志威](https://zwhe99.github.io)、[杜巍](https://scholar.google.com/citations?user=tFYUBLkAAAAJ&hl=en)、[赵皓东](https://dongdongzhaoup.github.io/)、[吴宗儒](https://zrw00.github.io/)； 
 
 - 新加坡国立大学：[费豪](http://haofei.vip/)
 
