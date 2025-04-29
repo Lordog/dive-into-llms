@@ -111,7 +111,7 @@ pre_edit_outputs = model.generate(
 post_edit_outputs = edited_model.generate(
     input_ids=batch['input_ids'].to('cuda'),
     attention_mask=batch['attention_mask'].to('cuda'),
-    max_new_tokens=3
+    max_new_tokens=3)
 ```
 ## 5. 规模化的编辑（可选）
 ### 5.1 Batch edit
