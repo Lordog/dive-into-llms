@@ -1,114 +1,188 @@
-<p align="center">
-<h1 align="center">《动手学大模型》系列编程实践教程</h1>
-</p>
-<p align="center">
-  	<a href="https://img.shields.io/badge/version-v0.1.0-blue">
-      <img alt="version" src="https://img.shields.io/badge/version-v0.1.0-blue?color=FF8000?color=009922" />
-    </a>
-  <a >
-       <img alt="Status-building" src="https://img.shields.io/badge/Status-building-blue" />
-  	</a>
-  <a >
-       <img alt="PRs-Welcome" src="https://img.shields.io/badge/PRs-Welcome-red" />
-  	</a>
-   	<a href="https://github.com/Lordog/dive-into-llms/stargazers">
-       <img alt="stars" src="https://img.shields.io/github/stars/Lordog/dive-into-llms" />
-  	</a>
-  	<a href="https://github.com/Lordog/dive-into-llms/network/members">
-       <img alt="FORK" src="https://img.shields.io/github/forks/Lordog/dive-into-llms?color=FF8000" />
-  	</a>
-    <a href="https://github.com/Lordog/dive-into-llms/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/Lordog/dive-into-llms?color=0088ff"/>
-    </a>
-    <br />
-</p>
+# การปรับจูนและปรับใช้โมเดลภาษาที่ผ่านการฝึกล่วงหน้า
 
+> คำแนะนำ: ส่วนนี้แนะนำการปรับจูนโมเดลที่ผ่านการฝึกล่วงหน้า  
+ต้องการเพิ่มประสิทธิภาพของโมเดลที่ผ่านการฝึกล่วงหน้าให้กับงานเฉพาะหรือไม่? มาเลือกโมเดลที่เหมาะสม ปรับจูนบนงานเฉพาะ แล้วนำโมเดลที่ปรับจูนแล้วไปปรับใช้เป็นเดโมที่ใช้งานได้!
 
-<div align="center">
-<p align="center">
-  <a href="#项目动机">项目动机</a>/
-  <a href="#教程目录">教程目录</a>/
-  <a href="#贡献者列表">贡献者列表</a>
-</p>
-</div>
+## เป้าหมายของบทเรียนนี้:
+1. คุ้นเคยกับการใช้ไลบรารี Transformers
+2. เข้าใจการปรับจูน (fine-tuning) และการอนุมานของโมเดลที่ผ่านการฝึกล่วงหน้า (ทั้งเวอร์ชันแยกส่วนเพื่อตั้งค่าได้ และเวอร์ชันรวมสำเร็จรูป)
+3. สามารถใช้ Gradio Spaces ในการปรับใช้เป็นเดโม
+4. เข้าใจการเลือกประเภทโมเดลต่างๆ และกรณีการใช้งาน
 
-## 💡 Updates
+## เนื้อหาของบทเรียนนี้:
+### 1. การเตรียมงาน:
+#### 1.1 ทำความรู้จักไลบรารี: Transformers
+https://github.com/huggingface/transformers
 
-2025/06/06  感谢各位朋友们的关注和积极反馈！我们从以下两个方面对本教程进行了更新：
+> 🤗 Transformers ให้ API และเครื่องมือที่ช่วยดาวน์โหลดและฝึกโมเดลสมัยใหม่ได้อย่างสะดวก การใช้โมเดลที่ผ่านการฝึกล่วงหน้าช่วยลดการใช้คำนวณและคาร์บอนฟุตพริ้นต์ อีกทั้งประหยัดเวลาเมื่อเทียบกับการฝึกจากศูนย์
+- การประมวลผลภาษาธรรมชาติ (NLP): การจัดประเภทข้อความ, การจดจำหน่วยชื่อเฉพาะ, การตอบคำถาม, การทำ language modeling, สรุปข้อความ, การแปล, การเลือกแบบฝึกหัด และการสร้างข้อความ
+- วิชัน: การจัดประเภทภาพ, ตรวจจับวัตถุ, แยกส่วนเชิงความหมาย
+- เสียง: การรู้จำเสียงอัตโนมัติและการจัดประเภทเสียง
+- มัลติ-โมดอล: Q&A บนตาราง, OCR, การดึงข้อมูลจากเอกสารสแกน, การจัดประเภทวิดีโอ และ Visual Question Answering
 
-- [x] 上线国产化《大模型开发全流程》公益教程（含PPT、实验手册和视频），此处特别感谢华为昇腾社区的支持！
-- [x] 在原系列编程实践教程的基础上进行内容更新，并增加了新的主题（数学推理、GUI Agent、大模型对齐、隐写术等）！
+เอกสารภาษาไทย/จีน: https://huggingface.co/docs/transformers/main/zh/index
 
-## 🎯 项目动机
+![huggingface](./assets/huggingface.PNG)
 
-《动手学大模型》系列编程实践教程，由上海交通大学《自然语言处理前沿技术》（NIS8021）、《人工智能安全技术》课程（NIS3353）讲义拓展而来（教师：[张倬胜](https://bcmi.sjtu.edu.cn/home/zhangzs/)），旨在提供大模型相关的入门编程参考。本教程属公益性质、完全免费。通过简单实践，帮助同学们快速入门大模型，更好地开展课程设计或学术研究。
+#### 1.2 ติดตั้งสภาพแวดล้อม: ยกตัวอย่างการจัดหมวดข้อความ (เช่น ตรวจจับข่าวปลอม)
+1. เข้าไปที่ตัวอย่างงาน text-classification ของ Transformers เพื่อดู README และดาวน์โหลด requirements.txt กับ run_classification.py
+https://github.com/huggingface/transformers/tree/main/examples/pytorch/text-classification
 
-## 📚 教程目录
+2. ติดตั้งสภาพแวดล้อม:
+- สร้าง conda env: conda create -n llm python=3.9
+- เข้า virtual env: conda activate llm
+- pip install transformers
+- ลบ torch ที่ requirements จะติดตั้งอัตโนมัติ แล้วติดตั้งด้วย pip install -r requirements.txt
 
-| 教程内容         | 简介                                                         | 地址                                                         |
-| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 微调与部署       | 预训练模型微调与部署指南：想提升预训练模型在指定任务上的性能？让我们选择合适的预训练模型，在特定任务上进行微调，并将微调后的模型部署成方便使用的Demo！ | [[课件](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/dive-into-llm.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter1/dive-tuning.ipynb)] |
-| 提示学习与思维链 | 大模型的API调用与推理指南：“AI在线求鼓励？大模型对一些问题的回答令人大跌眼镜，但它可能只是想要一句「鼓励」” | [[课件](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/dive-into-prompting.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter2/dive-prompting.ipynb)] |
-| 知识编辑         | 语言模型的编辑方法和工具：想操控语言模型在对指定知识的记忆？让我们选择合适的编辑方法，对特定知识进行编辑，并将对编辑后的模型进行验证！ | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter3/dive_edit_0410.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter3/README.md)]  [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter3/dive_edit.ipynb)] |
-| 数学推理         | 如何让大模型学会数学推理？让我们快速蒸馏一个迷你R1！         | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter4/math.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter4/README.md)]  [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter4/sft_math.ipynb)] |
-| 模型水印         | 语言模型的文本水印：在语言模型生成的内容中嵌入人类不可见的水印 | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter5/watermark.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter5/README.md)]  [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter5/watermark.ipynb)] |
-| 越狱攻击         | 想要得到更好的安全，要先从学会攻击开始。让我们了解越狱攻击如何撬开大模型的嘴！ | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter6/dive-Jailbreak.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter6/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter6/dive-jailbreak.ipynb)] |
-| 大模型隐写       | “看不见的墨水”！想让大模型在流畅回答的同时，悄悄携带只有“自己人”能识别的信息吗？大模型隐写告诉你！ | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter7/stega.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter7/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter7/llm_stega.ipynb)] |
-| 多模态模型       | 作为能够更充分模拟真实世界的多模态大语言模型，其如何实现更强大的多模态理解和生成能力？多模态大语言模型是否能够帮助实现AGI？ | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter8/mllms.pdf)]  [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter8/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter8/mllms.ipynb)] |
-| GUI智能体        | 想要饭来张口、解放双手？那么让我们一起来让AI Agent替你点外卖、回消息、购物比价吧！ | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter9/GUIagent.pdf)]  [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter9/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter9/GUIagent.ipynb)] |
-| 智能体安全       | 大模型智能体迈向了未来操作系统之旅。然而，大模型在开放智能体场景中能意识到风险威胁吗？ | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter10/dive-into-safety.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter10/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter10/agent.ipynb)] |
-| RLHF安全对齐     | 基于PPO的RLHF实验指南：本教程”十分危险“，阅读后请检查你的大模型是否在冷笑。 | [[课件](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter11/RLHF.pdf)] [[教程](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter11/README.md)] [[脚本](https://github.com/Lordog/dive-into-llms/tree/main/documents/chapter11/RLHF.ipynb)] |
+> ถ้าดาวน์โหลดช้า ให้ใช้ mirror ในประเทศ: pip [Packages] -i https://pypi.tuna.tsinghua.edu.cn/simple
 
+> หากใช้ mirror ในประเทศเพื่อติดตั้ง PyTorch บางครั้งจะได้เฉพาะเวอร์ชัน CPU และไม่สามารถใช้ GPU ได้ ดังนั้น—
+- ใช้ conda install pytorch
 
+> หากดาวน์โหลดช้า ให้ดูวิธีตั้งค่า conda mirror ตามบล็อก: https://blog.csdn.net/weixin_42797483/article/details/132048218
 
-## 🔥 新上线：国产化《大模型开发全流程》
+3. เตรียมข้อมูล: ในที่นี้ใช้ชุดข้อมูลทวิตเตอร์ข่าวปลอมจาก Kaggle เป็นตัวอย่าง: https://www.kaggle.com/c/nlp-getting-started/data
 
-- **✨ 我们联合华为昇腾推出的《大模型开发全流程》公益教程正式上线！前沿技术+代码实践，手把手带你玩转AI大模型 ✨**: 
+#### 1.3 ชุดโค้ดตัวอย่างที่จัดเตรียมไว้ (โค้ดเดโมและข้อมูล)
+(1) เวอร์ชันแยกส่วนที่ปรับแต่งได้ (โมดูลหลักแยกชัดเจน เหมาะสำหรับการเรียนรู้และปรับแต่งการโหลดข้อมูล โครงสร้างโมเดล ตัวชี้วัด ฯลฯ)
+- TextClassificationCustom ดาวน์โหลด: https://pan.quark.cn/s/00dae5c2b128
 
-  在《动手学大模型》原系列教程的基础上，我们联合华为开发了《大模型开发全流程》系列课程。本系列教程基于昇腾基础软硬件开发，覆盖PPT、实验手册、视频等教程形式。该教程分为初级、中级、高级系列，面向不同的大模型实践需求，旨在将前沿技术通过代码实践的方式，为相关研究者、开发者由浅入深地提供快速上手、应用昇腾已支持模型和全新模型迁移调优的全流程开发指南。
-  
-- **🚀 前往昇腾社区探索《大模型开发全流程》系列课程**： 
-  
-  👉《[大模型开发学习专区](https://www.hiascend.com/edu/growth/lm-development#classification-floor-1)》@ 昇腾社区 👈 
-  
-- **✨ 课程内容展示 ✨**
+(2) เวอร์ชันรวมสำเร็จ (โค้ดใหญ่ขึ้น ใช้การเรียกพารามิเตอร์สำเร็จรูป เหมาะสำหรับการรันทดสอบโดยตรง)
+- TextClassification ดาวน์โหลด: https://pan.quark.cn/s/9d0510f1c98d
 
-  <!-- <img src="./pics/icon/title.jpg" width="300"/>
-  <img src="./pics/icon/cover.png" width="300"/>
-  <img src="./pics/icon/team.png" width="300"/>
-  <img src="./pics/icon/agent.png" width="300"/> -->
+### 2. พัฒนาแบบกำหนดได้บนเวอร์ชันแยกส่วน (MVP)
+มี 3 ไฟล์หลัก: main.py (โปรแกรมหลัก), utils_data.py (โหลดและจัดการข้อมูล), modeling_bert.py (โครงสร้างโมเดล)
 
-<p align = "center">
-  <img src="./pics/icon/title.jpg" width="48%"/>
-  <img src="./pics/icon/cover.png" width="48%"/>
-  <img src="./pics/icon/team.png" width="48%"/>
-  <img src="./pics/icon/agent.png" width="48%"/>
-</p>
+![project structure](./assets/0.png)
 
-## 🙏 免责声明
+#### 2.1 ทำความเข้าใจโมดูลสำคัญ
+1. โหลดและประมวลผลข้อมูล (utils_data.py)
+![utils_data.py](./assets/1.png)
 
-本教程所有内容仅仅来自于贡献者的个人经验、互联网数据、日常科研工作中的相关积累。所有技巧仅供参考，不保证百分百正确。若有任何问题，欢迎提交 Issue 或 PR。另本项目所用徽章来自互联网，如侵犯了您的图片版权请联系我们删除，谢谢。
+2. โหลดโมเดล (modeling_bert.py)
+![modeling_bert_1.py](./assets/2.png)
+![modeling_bert_2.py](./assets/3.png)
 
-## 🤝 欢迎贡献
+3. ฝึก/ตรวจสอบ/คาดการณ์ (main.py)
+![main.py](./assets/4.png)
 
-本教程目前是一个正在进行中的项目，如有疏漏在所难免，欢迎任何的PR及issue讨论。
+#### 2.2 รันฝึก/ตรวจสอบ/คาดการณ์แบบครบวงจร
+```shell
+python main.py
+```
 
-## ❤️ 贡献者列表
+### 3. ปรับจูนบนเวอร์ชันรวม (Optional — ใช้ run_classification.py)
+#### 3.1 ทำความเข้าใจโมดูลสำคัญ:
+1. โหลดข้อมูล (csv หรือ json)
+![load data](./assets/5.png)
 
-感谢以下老师和同学对本项目的支持与贡献：
+2. ประมวลผลข้อมูล
+![process data](./assets/6.png)
 
-**《动手学大模型》系列教程开发团队**：
+3. โหลดโมเดล
+![load model](./assets/7.png)
 
-- 上海交通大学：[张倬胜](https://bcmi.sjtu.edu.cn/home/zhangzs/)、[袁童鑫](https://github.com/Lordog)、[马欣贝](https://scholar.google.com/citations?user=LpUi3EgAAAAJ&hl=zh-CN&oi=ao)、 [何志威](https://zwhe99.github.io)、[杜巍](https://scholar.google.com/citations?user=tFYUBLkAAAAJ&hl=en)、[赵皓东](https://dongdongzhaoup.github.io/)、[吴宗儒](https://zrw00.github.io/)、[吴铮](https://wuzheng02.github.io/)、[董凌众](https://github.com/LZ-Dong)、[张玉龙](https://aslan-yulong.github.io/)
+4. ฝึก/ตรวจสอบ/คาดการณ์
+![train dev predict](./assets/8.png)
 
-- 新加坡国立大学：[费豪](http://haofei.vip/)
+#### 3.2 ฝึกโมเดล
+ทำการตรวจสอบบนชุดพัฒนา และคาดการณ์บนชุดทดสอบ โดยเรียกสคริปต์ดังนี้:
+```shell
+python run_classification.py \
+    --model_name_or_path  bert-base-uncased \
+    --train_file data/train.csv \
+    --validation_file data/val.csv \
+    --test_file data/test.csv \
+    --shuffle_train_dataset \
+    --metric_name accuracy \
+    --text_column_name "text" \
+    --text_column_delimiter "\n" \
+    --label_column_name "target" \
+    --do_train \
+    --do_eval \
+    --do_predict \
+    --max_seq_length 512 \
+    --per_device_train_batch_size 32 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 1 \
+    --output_dir experiments/
+```
 
-**《大模型开发全流程》系列教程开发团队：**
+ถ้าเกิด error หรือกระบุก ควรตรวจสอบเครือข่าย:
+1. หากดาวน์โหลดโมเดลแล้วขึ้น “Network is unreachable” ให้ดาวน์โหลดโมเดลด้วยมือจาก: https://huggingface.co/google-bert/bert-base-uncased  
+2. หากหลังจากใส่ข้อมูลแล้วการประมวลผลค้าง เมื่อกด CTRL+C แล้วเห็นว่าค้างที่ “connection” ให้ลองดูที่การโหลดแพ็กเกจ evaluate ซึ่งอาจพยายามเชื่อมต่อเครือข่ายแล้วล้มเหลว
 
-- 上海交通大学：[张倬胜](https://bcmi.sjtu.edu.cn/home/zhangzs/)、[刘功申](https://infosec.sjtu.edu.cn/DirectoryDetail.aspx?id=75)、[陈星宇](https://scholar.google.com/citations?user=d-dNtjrMJ5YC&hl=en)、[程彭洲](https://scholar.google.com/citations?user=qxnwzDUAAAAJ&hl=en)、[董凌众](https://github.com/LZ-Dong)、 [何志威](https://zwhe99.github.io)、[鞠天杰](https://scholar.google.com/citations?user=f8PPcnoAAAAJ&hl=en)、[马欣贝](https://scholar.google.com/citations?user=LpUi3EgAAAAJ&hl=zh-CN&oi=ao)、 [吴铮](https://scholar.google.com/citations?hl=zh-CN&user=qBM1UbUAAAAJ&view_op=list_works&gmla=AIfU4H6PG9JyjRub6BYIIZ4isQE7MBAM3Eoec6OJfX4z_8-pOE8bI1Wgdo3XL5qOZWR3U-h-lIP2q0zXt5gzyFKMSg7MNnBBWLv5d1IVG30UANczTP0)、[吴宗儒](https://zrw00.github.io/)、[闫子赫](https://scholar.google.com/citations?user=O2YfSHoAAAAJ&hl=zh-CN)、[姚杳](https://scholar.google.com/citations?user=tLMP3IkAAAAJ)、[袁童鑫](https://github.com/Lordog)、[赵皓东](https://dongdongzhaoup.github.io/);
+![bug](./assets/9.png)
 
-- 华为昇腾社区：ZOMI、谢乾、程黎明、楼梨华、焦泽昱
+ในกรณีนี้ สามารถดาวน์โหลดแพ็กเกจ evaluate จาก GitHub: https://github.com/huggingface/evaluate/tree/main แล้วเปลี่ยนพารามิเตอร์ --metric_name เป็นเส้นทางไฟล์ของมาตรวัดบนเครื่อง เช่น:
+```shell
+python run_classification.py \
+    --model_name_or_path  bert-base-uncased \
+    --train_file data/train.csv \
+    --validation_file data/val.csv \
+    --test_file data/test.csv \
+    --shuffle_train_dataset \
+    --metric_name evaluate/metrics/accuracy/accuracy.py \
+    --text_column_name "text" \
+    --text_column_delimiter "\n" \
+    --label_column_name "target" \
+    --do_train \
+    --do_eval \
+    --do_predict \
+    --max_seq_length 512 \
+    --per_device_train_batch_size 32 \
+    --learning_rate 2e-5 \
+    --num_train_epochs 1 \
+    --output_dir experiments/
+```
 
-## 🌟 Star History
+![reference result](./assets/10.png)
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Lordog/dive-into-llms&type=Date)](https://star-history.com/#Lordog/dive-into-llms&Date)
+### 4. การปรับใช้โมเดล: หลังฝึกเสร็จ เราสามารถสร้างเดโมออนไลน์บน Gradio Spaces
+#### 4.1 เอกสาร Gradio Spaces
+https://huggingface.co/docs/hub/en/spaces-sdks-gradio
+
+#### 4.2 สร้าง Spaces
+1. https://huggingface.co/new-space?sdk=gradio  
+2. หมายเหตุ: หากเปิดไม่ได้ ลองใช้การเชื่อมต่อแบบมี proxy หรือ VPN
+
+![Gradio Spaces](./assets/gradio.png)
+
+#### 4.3 โค้ดอนุมานสำคัญ
+ดูในไฟล์ app.py ของแพ็กเกจตัวอย่าง
+
+![app.py](./assets/11.png)
+
+#### 4.4 อัปโหลด app.py, ไฟล์สภาพแวดล้อม และโมเดลไปยัง Gradio Spaces
+1. ไฟล์กำหนดสภาพแวดล้อม (requirements.txt)
+```
+transformers==4.30.2
+torch==2.0.0
+```
+
+2. โครงสร้างไฟล์ตัวอย่าง
+![file overview](./assets/12.png)
+
+3. ตัวอย่างผลลัพธ์เดโมที่ประสบความสำเร็จ: https://huggingface.co/spaces/cooelf/text-classification  
+ในมุมขวาบนที่แท็บ “Files” สามารถดูโค้ดได้
+
+![Files](./assets/13.png)
+
+4. ไข่อีสเตอร์: บนแพลตฟอร์ม Spaces สามารถดูเดโมยอดนิยมรายสัปดาห์และค้นหาเดโม/โมเดลที่สนใจเพื่อทดลองใช้งาน
+![Spaces](./assets/14.png)
+
+### 5. แบบฝึกหัดเชิงลึก
+1. ทดลองงานจัดประเภท/ถดถอยอื่น ๆ เช่น การวิเคราะห์อารมณ์, การจัดหมวดข่าว, การจัดหมวดช่องโหว่ ฯลฯ  
+2. ทดลองโมเดลประเภทอื่น ๆ เช่น T5, ELECTRA ฯลฯ
+
+### 6. โมเดลที่ใช้กันบ่อยอื่น ๆ
+1. แบบจำลองตอบคำถาม (Question Answering): https://github.com/huggingface/transformers/tree/main/examples/pytorch/question-answering  
+2. การสรุปข้อความ (Summarization): https://github.com/huggingface/transformers/tree/main/examples/pytorch/summarization  
+3. เรียกใช้ Llama2 เพื่ออนุมาน: https://huggingface.co/docs/transformers/en/model_doc/llama2  
+4. ปรับจูน Llama2 แบบน้ำหนักเบา (LoRA): https://github.com/peremartra/Large-Language-Model-Notebooks-Course/blob/main/5-Fine%20Tuning/LoRA_Tuning_PEFT.ipynb
+
+### 7. อ่านเพิ่มเติม
+1. บทความรีวิวเชิงลึก 43 หน้าสำหรับ LLMs: [Large Language Models: A Survey] (ลิงก์ไปยัง arXiv ในต้นฉบับ) — (ตัวอย่างต้นฉบับในจีน/ลิงก์)  
+   ลิงก์บทความ: https://arxiv.org/pdf/2402.06196.pdf
+2. วิดีโอ/การแนะนำ GPT, GPT-2, GPT-3: https://www.bilibili.com/video/BV1AF411b7xQ?t=0.0  
+3. วิดีโอ/การแนะนำ InstructGPT: https://www.bilibili.com/video/BV1hd4y187CR?t=0.4
