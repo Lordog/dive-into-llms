@@ -1,10 +1,14 @@
-# 动手学大模型：RLHF
+# RLHF
 
-> 本实验手册翻译并整合了网络资料 [blog](https://newfacade.github.io/notes-on-reinforcement-learning/17-ppo-trl.html) & [trl examples](https://github.com/huggingface/trl/blob/main/examples/notebooks/gpt2-sentiment.ipynb)
+## 课件幻灯片
 
-复现实验配置：单卡 NVDIA A800-SXM4-80GB 占用 10097MiB，训练耗时 35min19s。
+```pdf
+chapter11/RLHF.pdf
+```
 
-阅读教程：[slide](./RLHF.pdf)
+## 教程内容
+
+> 导读：基于人类反馈的强化学习(RLHF)是ChatGPT等模型成功的关键技术。本章将深入解析RLHF的三个阶段：SFT、Reward Modeling和PPO，并提供实践代码。
 
 notebook：[notebook](./RLHF.ipynb)
 
@@ -546,4 +550,3 @@ tokenizer.save_pretrained("model/gpt2-imdb-pos-v2")
      'model/gpt2-imdb-pos-v2/merges.txt',
      'model/gpt2-imdb-pos-v2/added_tokens.json',
      'model/gpt2-imdb-pos-v2/tokenizer.json')
-

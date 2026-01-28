@@ -1,6 +1,14 @@
-# LLM数学推理
-本项目实现了让大规模语言模型（LLM）学习数学推理的代码，主要技术为使用Supervised Finetuning（SFT）来让模型学习DeepSeek-R1生成的回复，从中学习复杂的数学推理技能（如反思、验算等）。
-本实验基于[DeepMath-103K](https://huggingface.co/datasets/zwhe99/DeepMath-103K)数据集以及[Qwen/Qwen2.5-Math-1.5B](https://huggingface.co/Qwen/Qwen2.5-Math-1.5B)模型，带领读者初步尝试在数学任务上的数据蒸馏全流程。
+# 数学推理
+
+## 课件幻灯片
+
+```pdf
+chapter4/math.pdf
+```
+
+## 教程内容
+
+> 导读：数学推理能力是大模型智能水平的重要体现。本章将介绍如何通过SFT（监督微调）和思维链（CoT）等技术增强大模型的数学解题能力。
 
 ## 实验目的
 - 了解数学相关的数据集的清理和预处理
