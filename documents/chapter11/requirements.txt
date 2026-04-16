@@ -5,4 +5,4 @@ tqdm==4.67.1
 pandas==2.2.3
 transformers==4.51.3
 datasets==3.5.0
-trl==0.9.4
+trl==0.15.2
