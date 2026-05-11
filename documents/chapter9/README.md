@@ -7,7 +7,7 @@
 3.尝试基于构建的GUI智能体进行推理
 ## 1.准备工作
 ### 1.1 了解GUI智能体领域的技术路线和研究现状
-阅读教程：[[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter8/GUIagent.pdf)]
+阅读教程：[[Slides](https://github.com/Lordog/dive-into-llms/blob/main/documents/chapter9/GUIagent.pdf)]
 
 ### 1.2 了解什么是自适应人机交互GUI智能体
 参考论文：[[Paper](https://arxiv.org/abs/2503.16465)]
