@@ -1,3 +1,39 @@
+<img width="1170" height="895" alt="IMG_1926" src="https://github.com/user-attachments/assets/d756a325-8a17-4167-865c-a201d84ca9de" />
+<img width="1170" height="1254" alt="IMG_1925" src="https://github.com/user-attachments/assets/bdde9858-834f-4078-abf4-4a8d4a6fabd8" />
+<img width="1170" height="863" alt="IMG_1916" src="https://github.com/user-attachments/assets/c6b14a1c-2bae-4abe-9078-b4c72e7556c7" />
+<img width="585" height="1266" alt="IMG_1872" src="https://github.com/user-attachments/assets/96bff3c4-e915-4eea-988a-d71459b7fac4" />
+<img width="585" height="1266" alt="IMG_1873" src="https://github.com/user-attachments/assets/747371bb-a594-49e6-8e72-748aaa651fcf" />
+<img width="585" height="1266" alt="IMG_1874" src="https://github.com/user-attachments/assets/4f50ef7c-5abe-49ad-a6f6-1dc22510f6e5" />
+<img width="585" height="1266" alt="IMG_1866" src="https://github.com/user-attachments/assets/b7247554-97a7-4bfb-b814-6525f6d5b88b" />
+<img width="585" height="1266" alt="IMG_1867" src="https://github.com/user-attachments/assets/dc5e0021-02a3-45a1-ad19-2e4110a0ac27" />
+<img width="585" height="1266" alt="IMG_1868" src="https://github.com/user-attachments/assets/d2e286ba-d0d5-45c3-b14d-69a03e2109c9" />
+<img width="585" height="1266" alt="IMG_1869" src="https://github.com/user-attachments/assets/3bf48c30-9a5f-4b1e-96e8-a18164cb793b" />
+<img width="585" height="1266" alt="IMG_1870" src="https://github.com/user-attachments/assets/19baa3d6-f13a-4465-8fec-d884e08becf7" />
+<img width="585" height="1266" alt="IMG_1871" src="https://github.com/user-attachments/assets/63347d72-502b-4341-8113-20ad2799d6d9" />
+<img width="1266" height="585" alt="IMG_1875" src="https://github.com/user-attachments/assets/6d389d7a-a772-4334-8f90-d40a8fb6b9ac" />
+<img width="1266" height="585" alt="IMG_1876" src="https://github.com/user-attachments/assets/9dd643ee-00b9-4f1d-a299-fb0d71093645" />
+<img width="585" height="1266" alt="IMG_1877" src="https://github.com/user-attachments/assets/357a6cdb-6774-4bdc-936f-a640df768145" />
+<img width="585" height="1266" alt="IMG_1878" src="https://github.com/user-attachments/assets/cd5ac61d-c1c9-48e2-83d6-67ca87651a7f" />
+<img width="585" height="1266" alt="IMG_1879" src="https://github.com/user-attachments/assets/d6df914e-9406-4ef1-a0e8-5229cd9d0abb" />
+<img width="585" height="1266" alt="IMG_1880" src="https://github.com/user-attachments/assets/c2222ba0-4c58-462e-971d-83f1a3940e6f" />
+<img width="585" height="1266" alt="IMG_1881" src="https://github.com/user-attachments/assets/affd21ad-e083-4505-b290-905bd4610e62" />
+<img width="1170" height="1423" alt="IMG_1882" src="https://github.com/user-attachments/assets/0df288cd-f0f7-48e7-8cf3-6ccf3b07118c" />
+<img width="1170" height="1715" alt="IMG_1883" src="https://github.com/user-attachments/assets/ba2fabee-6402-4da6-b710-1781e9067400" />
+<img width="1170" height="1634" alt="IMG_1884" src="https://github.com/user-attachments/assets/da48aa10-309f-461d-8069-d5ffed1f66e6" />
+<img width="1170" height="1650" alt="IMG_1885" src="https://github.com/user-attachments/assets/e0ec63b9-4dce-479b-8428-89760da2b4a2" />
+<img width="1170" height="1143" alt="IMG_1886" src="https://github.com/user-attachments/assets/bb01f47d-5bcb-4f18-bb3e-87aa8a7b5731" />
+<img width="585" height="1266" alt="IMG_1893" src="https://github.com/user-attachments/assets/fbe6e9c5-ebbb-40e2-aaf3-739c2c8cfcde" />
+<img width="585" height="1266" alt="IMG_1895" src="https://github.com/user-attachments/assets/56ed55b6-83a6-4708-b9c1-560a917c9c76" />
+<img width="585" height="1266" alt="IMG_1894" src="https://github.com/user-attachments/assets/a1ddc4a4-73af-4172-b8c8-b93dbd8ed684" />
+<img width="585" height="1266" alt="IMG_1904" src="https://github.com/user-attachments/assets/2549ed94-6d03-46e2-94b4-20153872f5b1" />
+<img width="585" height="1266" alt="IMG_1902" src="https://github.com/user-attachments/assets/34903591-3fba-406c-b466-f98b935f48d4" />
+<img width="585" height="1266" alt="IMG_1903" src="https://github.com/user-attachments/assets/ba24ca8d-4a51-4844-ae59-06e37181ea33" />
+<img width="585" height="1266" alt="IMG_1901" src="https://github.com/user-attachments/assets/d9fd7e37-9902-44df-a566-7ec5168c8b61" />
+<img width="585" height="1266" alt="IMG_1898" src="https://github.com/user-attachments/assets/78934182-cf37-4ba6-98b5-4abdc3eef09b" />
+<img width="585" height="1266" alt="IMG_1899" src="https://github.com/user-attachments/assets/33bb1067-3a2d-48b8-a1b7-bf88540a2887" />
+<img width="585" height="1266" alt="IMG_1900" src="https://github.com/user-attachments/assets/d80c14c3-b141-4aa6-9fff-96a386bf9778" />
+<img width="585" height="1266" alt="IMG_1897" src="https://github.com/user-attachments/assets/5117703a-687a-4b0b-a145-c72f220af7b6" />
+<img width="585" height="1266" alt="IMG_1896" src="https://github.com/user-attachments/assets/4e17ff35-e8a1-46af-9120-b2db7860e1c4" />
 # 预训练语言模型微调与部署
 
 > 导读: 该部分介绍预训练模型微调
